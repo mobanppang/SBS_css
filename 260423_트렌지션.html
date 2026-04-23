@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>트렌지션</title>
+</head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: #ff98d1;
+        margin: 10px;
+    }
+    .d1{
+        transition-duration: 1s;
+        /*transition-delay: 1s;*/
+        /*transition-timing-function: linear;*/
+    }
+    .d1:hover{
+        transform: translateX(300px);
+    }
+    .d2{
+        border-radius: 50%;
+        border: 5px solid chartreuse;
+        border-top-color: blue;
+        border-bottom-color: #ff1180;
+        border-left-color: gold;
+        border-right-color: gold;
+        transition-duration: 1s;
+    }
+    .d2:hover{
+        transform: translateX(300px) rotate(350deg) scale(200%);
+    }
+    .d3{
+        background-color: darkolivegreen;
+        transition-duration: 1s;
+        /*transition-property: background-color;*/
+    }
+    .d3:hover{
+        transform: translateX(100%);
+        background-color: lime;
+    }
+    .d4{
+        background-color: #ffdf5b;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(0.52, -0.45, 0.6, 1.47);
+    }
+    .d4:hover{
+        transform: scale(2);
+    }
+</style>
+<body>
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+    <div class="d4"></div>
+</body>
+</html>
