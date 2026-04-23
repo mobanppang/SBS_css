@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문단</title>
+    <style>
+        ul{
+            border: 1px solid blue;
+            /*list-style-position: inside;*/
+            /*list-style-type: "✨";*/
+            /*list-style-image: url("https://search.pstatic.net/sunny/?src=https%3A%2F%2Fan2-img.amz.wtchn.net%2Fimage%2Fv2%2FTDR9pR4vFrHKOXUvLbgb8g.jpg%3Fjwt%3DZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1KbklsMHNJbkFpT2lJdmRqSXZjM1J2Y21VdmRYTmxjaTlSWjNrMU1VY3dTMEp4UkdwckwzQnliMlpwYkdVdk1UWXpOVFEwTkRnNE9EWTNOVGd4TWpZM01DSjkuQXdHZ0Vpd21tNHo0czhYUGM4U2otMjNLZWZOeFUwSTlOaTdkQlVNbEdmRQ%3D%3D&type=sc960_832");*/
+            list-style: none; /* 메뉴 만들 때 쓰임 */
+        }
+        table{
+            text-align: center;
+            width: 400px;
+            border: 3px solid blueviolet;
+            border-collapse: separate;
+            border-spacing: 15px;
+        }
+        td{
+            width: 20px;
+            /*height: 40px;*/
+            border: 1px solid blue;
+        }
+        .col1{
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>ul-li1</li>
+        <li>ul-li2</li>
+        <li>ul-li3</li>
+    </ul>
+
+    <ol type="A">
+        <li>ol-li1</li>
+        <li>ol-li2</li>
+        <li>ol-li3</li>
+    </ol>
+
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <table>
+        <colgroup>
+            <col class="col1">
+            <col class="col2">
+            <col class="col3">
+        </colgroup>
+        <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+        <tbody>
+        <tr>
+            <td></td>
+        </tr>
+    </tbody>
+        <tfoot>
+        <tr>
+            <td></td>
+        </tr>
+    </tfoot>
+    </table>
+
+
+
+</body>
+</html>

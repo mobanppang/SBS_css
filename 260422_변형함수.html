@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>변형함수</title>
+</head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+    }
+    #d1{
+        background-color: #ffa74f;
+        /* x축, 오른쪽으로 100px 이동 */
+        transform: translateX(100px);
+    }
+    #d2{
+        background-color: #ff98d1;
+        transform: rotateZ(45deg);
+    }
+    #d3{
+        background-color: cadetblue;
+        transform: scaleY(200%);
+    }
+    #d4{
+        background-color: olive;
+        margin: 200px;
+    }
+    #d4:hover{
+        transform: scale(200%);
+    }
+    #d5{
+        background-color: chartreuse;
+    }
+    #d5:hover{
+        transform: translateX(300px);
+    }
+</style>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+</body>
+</html>

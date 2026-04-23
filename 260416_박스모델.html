@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>박스모델</title>
+    <style>
+        #d1{
+            width: 200px;
+            background-color: bisque;
+            border: 10px solid black;
+            box-sizing: border-box;
+            box-shadow: 10px 50px 100px 10px red;
+        }
+        /*box-sizing: border-box;<<보더 포함해서 가로 200px*/
+        span{
+            background-color: #ff1180;
+            width: 15000px;
+        }
+        #d2{
+            background-color: darkolivegreen;
+            /*4개 : 시계방향 위 - 아래 - 오른쪽 - 왼쪽*/
+            padding: 10px 50px;
+            width: 500px;
+            border: 10px solid coral;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!--  태그 안에 lorem적고 탭  -->
+    <div id="d1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias necessitatibus nulla officia ratione sit. Accusantium asperiores blanditiis deleniti doloribus eius, et expedita incidunt ipsam itaque quis, quisquam, reiciendis rerum sunt.</div>
+    <div id="d2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cum illum, ipsam magnam non perspiciatis quas. Blanditiis consectetur cum exercitationem, iusto labore perferendis quia quidem quo sed vel. Ipsum, necessitatibus.</div>
+    <span>span</span>
+    <div>욜로욜로yolo</div>
+</body>
+</html>

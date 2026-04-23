@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>디스플레이</title>
+    <style>
+        div, span{
+            background-color: #ffdf5b;
+            width: 200px;
+            height: 100px;
+            border: 1px solid darksalmon;
+        }
+            /*
+            인라인 요소 : width , height 적용x, 콘텐츠 영역 크기만 차지
+                => 글자처럼 판단. text-align: center 하면 중앙으로 감
+            display: inline => 인라인 요소로 설정
+            */
+        div{
+            display: inline;
+            /*인라인 요소에서 마진은 양 옆만 적용된다. 위,아래 적용x*/
+            margin: 100px;
+        }
+        span{
+            /*인라인 속성과 블록 속성을 저누 갖고 있음.
+                => width, height, margin 전부 가능
+                => text-align: center 가능(글자처럼 취급)
+                => 자신의 width, height 부분만 영역을 가짐
+            */
+            display: inline-block;
+        }
+        li{
+            width: 100px;
+            display: inline-block;
+            background-color: #ff98d1;
+            text-align: center;
+        }
+        li > a{
+            width: inherit; /* 상속. 부모로부터 물려받으셈 (색상도 가능) */
+            /*display: inline-block;*/
+            text-decoration: none; /* 밑줄 없애셈 */
+            color: white;
+            padding: 10px 0;
+            display: block;
+            cursor: pointer; /* 마우스 커서를 손모양으로 */
+            &:hover{
+                background-color: #ff1180;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>div1</div>
+    <div>div2</div>
+    <hr>
+    <span>span1</span>
+    <span>span2</span>
+
+    <table>
+        <tr>
+            <td>table</td>
+        </tr>
+    </table>
+
+    <ul>
+        <li>li->display: list-item속성 가짐</li>
+    </ul>
+
+    <hr>
+    <ul>
+        <li><a href="#">HTML</a></li>
+
+        <li><a href="">CSS</a></li>
+        <li><a href="">JavaScript</a></li>
+    </ul>
+
+
+
+
+</body>
+</html>

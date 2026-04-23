@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>가상요소</title>
+</head>
+<style>
+    .btn{
+        background-color: #ffa74f;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: #ff98d1;
+        color: bisque;
+    }
+    .btn:active{
+        background-color: #ff1180;
+        color: bisque;
+    }
+    /*커서가 위치할 때*/
+    input:focus{
+        background-color: #ffdf5b;
+    }
+    input:disabled{
+        background-color: black;
+    }
+    input:enabled{
+        color: blue;
+    }
+    a:link{
+        color: red;
+    }
+    /* a태그 한번이라도 클릭한 상태.
+        방문한 기준은 href에 들어가는 url에 따라 결정.
+        여러a태그라도 href가 같으면 같은 방문으로 침.*/
+    a:visited{
+        color: olive;
+    }
+    /* 어떤 요소라도 마우스를 올렸을 때 적용.
+        가상 요소 앞에는 대상을 작성하는 것임. 대상 생략하면 누구든*/
+    :hover{
+        font-weight: bold;
+    }
+    #s1{
+        height: 500px;
+        background-color: #ffdf5b;
+    }
+    #s2{
+        height: 300px;
+        background-color: #ff98d1;
+    }
+    #s3{
+        height: 800px;
+        background-color: cadetblue;
+    }
+    html{
+        /* 해시 타겟으로 이동 할 때 부드럽게 스크롤 됨.*/
+        scroll-behavior: smooth;
+    }
+    /* 마우스 안올리고 있을 때 적용 */
+    button:not(:hover){
+
+    }
+
+    /* button태그이면서 a 클래스 가지는 요소 */
+    button.a{}
+    /* .btn클래스 가지면서 a클래스도 가지는 요소 */
+    .btn.a{}
+    /* button 태그인데 a 클래스는 안가지고 있는 요소 */
+    button:not(.a){}
+
+
+</style>
+<body>
+    <div class="btn">
+        <section class="a"></section>
+    </div>
+
+    <button class="btn a">버튼</button> <br>
+    <button class="a">버튼</button> <br>
+    <button class="btn b">버튼</button> <br>
+
+    <button class="btn">버튼</button> <br>
+    <input type="text" value="test1"> <br>
+    <input type="text" value="test2" readonly> <br>
+    <!-- 둘의 차이는?  -->
+    <!-- 읽기가능. 값 변경 불가능 -->
+    <input type="text" value="test3" disabled> <br>
+    <!-- 읽기, 값 둘 다 의미없음. 비활성화 상태 -->
+    <a href="#1">이동하기1</a> <br>
+    <a href="#2">이동하기2</a> <br>
+
+    <br>
+    <a href="#s1">section1로 이동</a>
+    <a href="#s2">section2로 이동</a>
+    <a href="#s3">section3로 이동</a>
+    <br><br><br><br><br><br><br><br><br><br>
+    <section id="s1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque deleniti deserunt dolor doloremque nobis saepe sint tenetur. Fugiat, iure, saepe? Animi aperiam deleniti deserunt eaque eos, iste itaque soluta!</section>
+    <section id="s2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque, delectus dolor eius explicabo ipsa laboriosam laborum minus nam nobis odio provident quas quia quidem sunt vero vitae voluptatem! Assumenda.</section>
+    <section id="s3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam consequatur culpa, cupiditate debitis delectus dignissimos eos expedita fugit illo incidunt maiores, nihil odio quam recusandae reiciendis saepe velit veritatis.</section>
+</body>
+</html>

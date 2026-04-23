@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선택자 우선순위</title>
+</head>
+<style>
+    /* 우선도: 인라인(태그에 적는거) > #(id) > .(calss) */
+    .d3{
+        color: cadetblue;
+    }
+    #d2{
+        color: coral;
+    }
+    div{
+        /*color: darkred!important;*/
+        color: darkred;
+    }
+    /* section 내부의 div 선택 */
+    section > div{
+        font-style: italic;
+    }
+</style>
+<body>
+    <div style="color: indigo">d1</div>
+    <div id="d2">d2</div>
+    <div class="d3">d3</div>
+    <div>d4</div>
+
+    <section>
+        <div>section 안의 div</div>
+    </section>
+
+</body>
+</html>

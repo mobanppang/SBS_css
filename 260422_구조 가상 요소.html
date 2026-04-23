@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>구조 가상 요소</title>
+</head>
+<style>
+    ul>li:first-child {
+        color: #ff98d1;
+    }
+    ul>li:last-child {
+        color: #ffdf5b;
+    }
+    /* 6번째 li 선택해줘 */
+    ul>li:nth-child(6) {
+        color: olive;
+    }
+    /* even: 짝수, odd:홀수 */
+    ul>li:nth-child(even) {
+        background-color: cadetblue;
+    }
+    ul>li:nth-child(2n+1) {
+        font-size: 10px;
+    }
+    section{
+        background-color: #ffa74f;
+        padding: 0 20px;
+    }
+    section>div{
+        margin:  10px 0;
+    }
+    section>div:nth-child(1)::before {
+        content: 'z.z';
+
+    }
+    section>div:nth-child(2)::before {
+        content: '🐾';
+    }
+    section>div:nth-child(3)::before {
+        content: ''; /* 빈문자열 blank 이 위치에 뭔가 있다. */
+        background-image: url("https://sitem.ssgcdn.com/06/89/76/item/1000658768906_i1_336.jpg");
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    span:first-child{
+
+    }
+</style>
+
+<body>
+<!--    ul>(li.a.b#test{안녕$})*      -->
+<!--  emmet 참고 하기 -->
+    <ul>
+        <li class="a b" id="test">안녕1</li>
+        <li class="a b" id="test">안녕2</li>
+        <li class="a b" id="test">안녕3</li>
+        <li class="a b" id="test">안녕4</li>
+        <li class="a b" id="test">안녕5</li>
+    </ul>
+
+<!--    ul>(li.li${리스트$})*10    -->
+<ul>
+    <li class="li1">리스트1</li>
+    <li class="li2">리스트2</li>
+    <li class="li3">리스트3</li>
+    <li class="li4">리스트4</li>
+    <li class="li5">리스트5</li>
+    <li class="li6">리스트6</li>
+    <li class="li7">리스트7</li>
+    <li class="li8">리스트8</li>
+    <li class="li9">리스트9</li>
+    <li class="li10">리스트10</li>
+</ul>
+
+<section>
+    <div>목록1</div>
+    <div>목록2</div>
+    <div>목록3</div>
+    <div>목록4</div>
+    <div>목록5</div>
+</section>
+
+<article>
+    <div>
+        <span></span>
+        <section></section>
+    </div>
+    <span></span>
+</article>
+
+
+</body>
+</html>

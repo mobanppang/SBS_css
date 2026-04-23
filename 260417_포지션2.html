@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>포지션2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            text-align: center;
+            background-color: #ffdf5b;
+            /* fixed: 현재 위치를 고정. 상단바에 자주 사용. 스크롤 움직여도 그대로*/
+            /* width, height 크기를 지정해줘야함 */
+            position: fixed;
+            width: 100%; /* 가로 크기 꽉 채우셈 */
+        }
+        main{
+            background-color: darkmagenta;
+            padding-top: 100px;
+            /*position: relative;*/
+        }
+        aside{
+            width: 250px;
+            height: 2000px;
+            text-align: center;
+            background-color: chartreuse;
+            display: inline-block;
+        }
+        section{
+            position: sticky;
+            top: 0; /* 붙어있을 기준 점을 정해줘야함. 자신의 부모 최상단에 붙으셈 */
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: blue;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        header
+    </header>
+    <main>
+        <aside>aside</aside>
+        <section>section</section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>폰트</title>
+    <style>
+        #d1{
+            font-size: 1.5rem;
+        }
+        #d2{
+            font-size: 1rem;
+            /*font-style: oblique;*/ /* 원래 글꼴을 단지 기울어지게 표시 */
+            font-style: italic; /* 폰트 자체에서 지원하는 기울임체 */
+            font-weight: 100;
+            font-family: HighTeenChoiHyoryeong;
+        }
+        section{
+            font-size: 40px;
+        }
+        section>div{
+            font-size: 1em;
+        }
+        #d4{
+            font-family: pre;
+
+        }
+        article{
+            font-size: 30px;
+        }
+        article>div{
+            font-size: 50%;
+        }
+        @font-face{
+            font-family: 'pre';
+            src: url('font/Pretendard-Black.otf');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'HighTeenChoiHyoryeong';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2604-1@1.0/Lasthighteen-Bold.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="d1">안녕하시와요</div>
+    <div id="d2">오늘 날씨가 꾸리해</div>
+    <section>
+        section
+        <div id="d3">놀러가고싶다</div>
+    </section>
+    <article>
+        article
+        <div id="d4">민턴칠래</div>
+    </article>
+</body>
+</html>
